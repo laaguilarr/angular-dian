@@ -1,0 +1,45 @@
+<div fxLayout="column" fxLayoutAlign="space-around stretch" >
+  <form [formGroup]="formHorario" autocomplete="off">
+    <h1>{{ modoEditar ? "Editar" : "Crear" }} usuario</h1>
+    <hr />
+    <div fxLayout="column wrap" fxLayoutGap="20px">
+      <mat-card style="width: 90%;">
+        <div mat-card-avatar style="background-image: url('assets/images/5856.jpg'); background-size: cover;">
+        </div>
+        <mat-card-title>Usuario</mat-card-title>
+        <mat-card-subtitle>Datos personales</mat-card-subtitle>
+        <mat-card-content>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <div fxFlex>
+              <mat-form-field appearance="outline" fxFill>
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name" />
+              </mat-form-field>
+            </div>
+  
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <div fxFlex>
+              <mat-form-field appearance="outline" fxFill>
+                <mat-label>Teléfono</mat-label>
+                <input matInput formControlName="phone" />
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div fxLayout="row" fxLayoutAlign="end">
+            <button
+              mat-stroked-button
+              color="primary"
+              (click)="save()"
+              [disabled]="!isValidForm()"
+            >
+              {{ modoEditar ? "Editar" : "Crear" }}
+            </button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </form>
+</div>

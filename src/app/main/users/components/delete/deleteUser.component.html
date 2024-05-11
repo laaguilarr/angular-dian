@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Confirmación de eliminación</h1>
+<div mat-dialog-content class="mat-typography">
+  <h3>Desea eliminar esto?</h3>
+  <p>Usuario : {{ data.name }}</p>
+  <p>Teléfono: {{ data.phone }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close] cdkFocusInitial>Cancelar</button>
+  <button mat-button mat-flat-button color="warn" (click)="eliminar()">
+    Eliminar
+  </button>
+</div>

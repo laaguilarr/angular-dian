@@ -1,0 +1,22 @@
+<div fxLayout="column">
+  <button mat-button routerLink="/">Home</button>
+  <hr />
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Usuarios </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div fxLayout="column">
+        <div>
+          <button mat-button routerLink="./users/create">Crear</button>
+        </div>
+        <div>
+          <button mat-button routerLink="./users/find">
+            Consultar
+          </button>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
